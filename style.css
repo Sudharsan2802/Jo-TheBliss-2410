@@ -235,7 +235,22 @@ input::placeholder { color: #c5adb9; }
 .birthday-heart { color: var(--rose); font-size: 2.6rem; margin-top: 20px; animation: heartbeat 1.7s infinite; }
 .birthday-section h2 { margin: 12px 0 28px; }
 .birthday-message { max-width: 620px; margin: 0 auto 30px; color: #e6d4dc; }
-.birthday-message p { margin: 0 0 20px; }
+
+/* Justified birthday message text */
+.birthday-message p {
+  margin: 0 0 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Keep the opening line and signature centered */
+.birthday-message p.opening,
+.birthday-message p.signature {
+  text-align: center;
+}
+
 .signature { color: var(--gold); font-family: var(--serif); font-size: 1.3rem; font-style: italic; }
 #confettiCanvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 
